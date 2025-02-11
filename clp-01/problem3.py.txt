@@ -1,0 +1,16 @@
+start = 50
+end = 101
+addition = 0
+count = 0
+numbers_that_meet_condition = []
+
+for i in range(start, end):
+    if i % 3 == 0 and i % 5 != 0:
+        addition += i
+        count += 1
+        numbers_that_meet_condition.append(i)
+
+print(f"Numbers divisible by 3 but not by 5 between {start} and {end - 1}: {numbers_that_meet_condition}")
+print("Total Sum:", addition)
+print(f"Total count of numbers meeting the condition: {count}")
+

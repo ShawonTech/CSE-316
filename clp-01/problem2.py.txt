@@ -1,0 +1,12 @@
+num = [50, 3, 4, 5, 22, 34, 45, 55, 6, 12, 11, 15, 13]
+print("Original list:", num)
+
+min_value = min(num)
+max_value = max(num)
+min_index = num.index(min_value)
+max_index = num.index(max_value)
+sorted_list = sorted(num)
+
+print(f"Minimum value: {min_value} at index {min_index}")
+print(f"Maximum value: {max_value} at index {max_index}")
+print("Sorted list:", sorted_list)

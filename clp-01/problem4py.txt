@@ -1,0 +1,17 @@
+num = [50, 3, 4, 5, 22, 34, 45, 55, 6, 12, 11, 15, 13]
+num.sort()
+
+if len(num) > 1:
+    # Fetch the second-to-last element (2nd largest)
+    second_largest = num[-2]
+    print("Second largest number in the sorted list:", second_largest)
+else:
+    print("The list is too short to find the second largest number.")
+
+print("Sorted list:", num)
+
+position = int(input("Which largest element would you like to retrieve (e.g., 2 for second largest)? "))
+if position <= len(num):
+    print(f"The {position}th largest number is:", num[-position])
+else:
+    print(f"Sorry, the list has only {len(num)} elements.")

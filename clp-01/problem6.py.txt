@@ -1,0 +1,23 @@
+def generate_fibonacci(n):
+    lst = [0, 1]
+
+    for i in range(2, n):
+        lst.append(lst[-1] + lst[-2])
+    return lst
+
+while True:
+    try:
+        n = int(input("Enter the number of terms you want in the Fibonacci sequence (or type '0' to exit): "))
+
+        if n == 0:
+            print("Exiting the program.")
+            break
+        
+        if n < 1:
+            print("Please enter a number greater than or equal to 1.")
+        else:
+            fibonacci_sequence = generate_fibonacci(n)
+            print(f"Fibonacci sequence with {n} terms: {fibonacci_sequence}")
+    
+    except ValueError:
+        print("Invalid input! Please enter a valid integer.")

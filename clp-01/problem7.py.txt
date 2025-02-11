@@ -1,0 +1,21 @@
+def largest(*args):
+    return max(args)
+
+while True:
+    try:
+        user_input = input("Enter numbers separated by spaces (or type 'exit' to stop): ")
+
+        if user_input.lower() == 'exit':
+            print("Exiting the program.")
+            break
+        
+        num_list = [int(x) for x in user_input.split()]
+        
+        if len(num_list) < 2:
+            print("Please enter at least two numbers.")
+        else:
+            result = largest(*num_list)
+            print(f"The largest number is: {result}")
+    
+    except ValueError:
+        print("Invalid input! Please enter valid numbers.")

@@ -1,0 +1,38 @@
+def sum_numbers(*args, include_even=False, include_odd=False):
+    addition = 0
+    print("Calculating the sum of numbers:")
+
+    for i in args:
+        if include_even and i % 2 == 0:
+            addition += i
+            print(f"Adding {i} (even)")
+        elif include_odd and i % 2 != 0:
+            addition += i
+            print(f"Adding {i} (odd)")
+        elif not include_even and not include_odd:
+            addition += i
+            print(f"Adding {i}")
+    return addition
+
+while True:
+    try:
+        user_input = input("Enter numbers separated by commas (or type 'exit' to stop): ")
+
+        if user_input.lower() == 'exit':
+            print("Exiting the program.")
+            break
+
+        num_list = [int(x) for x in user_input.split(',')]
+
+        choice = input("Do you want to sum even numbers, odd numbers, or all? (even/odd/all): ").lower()
+        if choice == 'even':
+            result = sum_numbers(*num_list, include_even=True)
+        elif choice == 'odd':
+            result = sum_numbers(*num_list, include_odd=True)
+        else:
+            result = sum_numbers(*num_list)
+        
+        print(f"The total sum is: {result}")
+    
+    except ValueError:
+        print("Invalid input! Please enter valid numbers separated by commas.")
