@@ -1,0 +1,15 @@
+import random
+
+students = [
+    ("Alice", 20, round(random.uniform(3.0, 4.0), 2)),
+    ("Bob", 22, round(random.uniform(3.0, 4.0), 2)),
+    ("Charlie", 21, round(random.uniform(3.0, 4.0), 2)),
+    ("David", 23, round(random.uniform(3.0, 4.0), 2)),
+    ("Eve", 19, round(random.uniform(3.0, 4.0), 2))
+]
+
+sorted_students = sorted(students, key=lambda x: x[2], reverse=True)
+
+print("Sorted Students by GPA (Highest to Lowest):")
+for name, age, gpa in sorted_students:
+    print(f"{name}, Age: {age}, GPA: {gpa}")

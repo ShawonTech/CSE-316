@@ -1,0 +1,14 @@
+import numpy as np
+
+rows, cols = 5, 5
+value_range = (1, 20)
+matrix = np.random.randint(value_range[0], value_range[1] + 1, size=(rows, cols))
+
+row_sums = matrix.sum(axis=1)
+row_means = matrix.mean(axis=1).round(2)
+
+print("Generated Matrix:")
+print(matrix, "\n")
+
+for i in range(rows):
+    print(f"Row {i+1} → Sum: {row_sums[i]}, Average: {row_means[i]}")

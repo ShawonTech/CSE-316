@@ -1,0 +1,8 @@
+import numpy as np
+
+size = 100
+random_array = np.linspace(np.random.rand(), np.random.rand() * 100, size)
+normalized_array = (random_array - random_array.min()) / (random_array.max() - random_array.min())
+
+print(f"Original Min: {random_array.min():.4f}, Max: {random_array.max():.4f}, Mean: {random_array.mean():.4f}")
+print("First 10 Normalized Values:", np.round(normalized_array[:10], 4))

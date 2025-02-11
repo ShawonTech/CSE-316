@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    "Product": ["Laptop", "Phone", "Tablet", "Headphone", "Computer", "Monitor", "Smartwatch"],
+    "Quantity": [10, np.nan, 5, 8, np.nan, 12, np.nan],
+    "Price": [1500, 800, np.nan, 200, 3000, 1000, 250],
+    "Discount (%)": [10, 5, 0, np.nan, 15, 8, np.nan]
+}
+

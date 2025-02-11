@@ -1,0 +1,8 @@
+import random
+
+numbers = [random.randint(1, 20) for _ in range(10)]
+unique_sorted_numbers = sorted(set(numbers))
+
+print("Original List:", numbers)
+print("Unique Sorted Numbers:", unique_sorted_numbers)
+print("Duplicates Removed:", len(numbers) - len(unique_sorted_numbers))
